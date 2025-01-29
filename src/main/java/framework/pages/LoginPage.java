@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 
 @AllArgsConstructor
@@ -16,7 +17,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     WebDriver driver ;
 
-    public void login(String username, String password) throws InterruptedException {
+	public void login(String username, String password) throws InterruptedException {
         // Enter username
         ElementUtil.enterText(
                 WaitUtil.waitForElementToBeVisible(
@@ -40,13 +41,11 @@ public class LoginPage {
         Thread.sleep(1000);
 
         // Click the Sign-In button
-        WaitUtil.waitForElementToBeClickable(
+        WebElement btn = WaitUtil.waitForElementToBeClickable(
                 driver,
                 driver.findElement(SignInLocators.SIGNIN_BUTTON),
-                10
+                15
         );
-        Thread.sleep(1000);
+        btn.click(); ;
     }
-
-
 }

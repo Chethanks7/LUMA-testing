@@ -8,11 +8,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class WebDriverFactory {
     public static WebDriver createDriver(String browser) {
         switch (browser.toLowerCase()){
-            case "chrome" -> new ChromeDriver();
-            case "firefox" -> new FirefoxDriver();
-            case "edge" -> new EdgeDriver();
+            case "chrome" -> {
+                return new ChromeDriver();
+            }
+            case "firefox" -> {
+                return new FirefoxDriver();
+            }
+            case "edge" -> {
+                return new EdgeDriver();
+            }
             default -> throw new IllegalStateException("unsupported browser :"+browser);
         }
-        return null ;
     }
 }

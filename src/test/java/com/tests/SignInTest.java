@@ -14,15 +14,9 @@ public class SignInTest extends BaseTest {
     @DataProvider(name = "signInData")
     public Object[][] getSignInData() throws IOException {
         List<String[]> data = ExcelUtil.readTestData(
-                "C:\\Users\\User\\Downloads\\LoginTestData.xlsx",
-                "LoginData");
+                "C:\\Users\\User\\Downloads\\Username_Password_Data.xlsx",
+                "Sheet1");
 
-        data.forEach(
-                fileData -> {
-                    System.out.println(fileData.length);
-                }
-
-        );
        return data.stream()
                 .map(row ->{
                         if(row.length!=0)return new Object[]{row[0],row[1]};
