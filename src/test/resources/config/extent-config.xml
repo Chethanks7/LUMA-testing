@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Report theme: STANDARD, DARK -->
+        <theme>STANDARD</theme>
+
+        <!-- Document title -->
+        <documentTitle>Automation Report</documentTitle>
+
+        <!-- Report name -->
+        <reportName>Test Execution Report</reportName>
+
+        <!-- Custom CSS -->
+        <css>.test { color: #2c3e50; }</css>
+    </configuration>
+</extentreports>
